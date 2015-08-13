@@ -4,10 +4,11 @@ angular.module('orgaTareas.controllers', [])
 
 .controller('forgotCtrl', function($scope) {})
 
-.controller('signinCtrl', function($scope, $state) {
+.controller('signinCtrl', function($scope, $state, SPService) {
 
   $scope.signIn = function() {
      alert('Login to SharePoint');
+     alert(SPService.Login());
 
 
      $state.go("tab.dash");
